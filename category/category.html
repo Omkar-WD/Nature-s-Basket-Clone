@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="category.css">
+</head>
+<body>
+    <div id="main-container">
+        <div id="filter-functionalites">
+            <div id="first-filter">
+                <span>Filter</span><span>Clear All</span>
+            </div>
+            <hr>
+            
+                <h3>Fruits and Vegetables</h3>
+            <div class="filter_s">
+                <p>Fruits</p>
+                <p>Exotic Fruits</p>
+                <p>Daily vegetables</p>
+                <p>Exotic vegetables</p>
+                <p>Baby Tender vegetables</p>
+                <p>Organic vegetables</p>
+                <p>Canned and Frozen</p>
+                <p>Cold Pressed and Freezed</p>
+            </div>
+            <hr>
+            <h3>Brands</h3>
+            <div class="filter_s">
+                <label><input type="checkbox">Fruits and Vegetables</label><br>
+                <label><input type="checkbox">Fruits and Vegetables Exotic</label><br>
+                <label><input type="checkbox">Faddox</label><br>
+                <label><input type="checkbox">Nature's Basket</label><br>
+                <label><input type="checkbox">Nature's Best</label><br>
+                <label><input type="checkbox">Tong Garden</label><br>
+                <label><input type="checkbox">Dole</label><br>
+                <label><input type="checkbox">Healthy Alternatives</label><br>
+                <label><input type="checkbox">Yummies</label><br>
+                <label><input type="checkbox">Daucy</label><br>
+                <label><input type="checkbox">Fruits</label><br>
+                <label><input type="checkbox">Vegetables</label><br>
+                <label><input type="checkbox">Freshcon</label><br>
+                <label><input type="checkbox">Happilo</label><br>
+                <label><input type="checkbox">Nature's</label><br>
+                <label><input type="checkbox">Organic</label><br>
+                <label><input type="checkbox">Tomato Cherry</label><br>
+            </div>
+            <hr>
+            <h3>Dietary and Lifestyle</h3>
+            <div class="filter_s">
+                <label><input type="checkbox">Organic</label><br>
+                <label><input type="checkbox">Vegetarian</label>
+            </div>
+            <hr>
+            <h3>Availabilty</h3>
+            <div class="filter_s">
+            <label><input type="checkbox">Exclude out of stock</label></div>
+            <hr>
+            <h3>Others</h3>
+            <div class="filter_s">
+            <label><input type="checkbox">New Products</label></div>
+        </div>
+        <div id="data-items">
+            <div id="price-sort">
+                <div id="catg-name">
+                    <div>
+                        <span>Fruits and vegetables</span>
+                        <span id="items-count"></span>
+                    </div>
+                    <div>
+                        <select id="relevance-sort" onchange="pricesort()">
+                            <option value= "">Relevance</option>
+                            <option value="high">price high to low</option>
+                            <option value="low">price low to high</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+                <p>Explore</p>
+            </div>
+            <div id="items-flex"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="category.js"></script>

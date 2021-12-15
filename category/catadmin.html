@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="category.css">
+</head>
+<body>
+    <form id="admin-form">
+        <select id="admin-cat">
+            <option>category</option>
+            <option value="fruits and vegetables">fruit & vegetables</option>
+            <option value="grocery">grocery</option>
+        </select>
+        <label>name</label>
+        <input type="text" id="cat-name">
+        <label>img</label>
+        <textarea id="img-src"></textarea>
+        <label>Quantity</label>
+        <input type="text" id="item-quantity">
+        <label>MRP</label>
+        <input type="text" id="cat-mrp">
+        <input type="submit" id="admin-submit">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Sr.no</th>
+                <th>Category</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Quantity</th>
+                <th>MRP</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody id="fv-tbody"></tbody>
+    </table>
+</body>
+</html>
+<script src="catadmin.js"></script>

@@ -140,4 +140,39 @@ h3{
 .filter_s > label:hover{
     color: #7fc42b;
 }
+#go-to-home{
+    margin-left: 90%;
+    border-radius: 5px;
+    background-color: #7fc42b;
+}
+@media only screen and (min-width:0) and (max-width:376px){
+    #filter-functionalites{
+        display: none;
+
+    }
+    #items-flex{
+        text-align: center;
+        justify-content: center;
+    }
+    #go-to-home{
+        margin-left: 70%;
+    }
+}
+
+@media only screen and (min-width:376px) and (max-width:768px){
+    #filter-functionalites{
+        display: none;
+
+    }
+    #items-flex{
+        text-align: center;
+        justify-content: center;
+    }
+    #go-to-home{
+        margin-left: 85%;
+    }
+}
+
+
+
 

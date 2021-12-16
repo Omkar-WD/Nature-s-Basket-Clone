@@ -29,7 +29,7 @@ var headerMenus = [
     },
     {
         name: "Cart",
-        href: "#cart",
+        href: "../Cart (R)/Cart.html",
     },
     {
         name: "Login",

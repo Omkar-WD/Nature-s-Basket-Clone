@@ -1,44 +1,47 @@
 var proddata = JSON.parse(localStorage.getItem("fgdatabase")) || [];
 print(proddata);
-function print(arr){
+function print(arr) {
     document.querySelector("#items-flex").textContent = "";
-    arr.map(function(elem){
+    arr.map(function (elem) {
         var outerdiv = document.createElement("div");
         var image = document.createElement("img");
-        image.setAttribute("src",elem.img);
+        image.setAttribute("src", elem.img);
         var span1 = document.createElement("span");
         span1.textContent = "DELIVERY IN 90 MINUTES";
-        span1.setAttribute("id","del-span")
+        span1.setAttribute("id", "del-span")
         var title = document.createElement("p");
-        title.textContent=elem.title;
-        title.setAttribute("id","item-name");
+        title.textContent = elem.title;
+        title.setAttribute("id", "item-name");
         var quantity = document.createElement("p");
         quantity.textContent = elem.qt;
         var div2 = document.createElement("div");
-        div2.setAttribute("id","rate-cart")
+        div2.setAttribute("id", "rate-cart")
         var mrpbutton = document.createElement("span");
-        mrpbutton.textContent = "MRP  ₹"+elem.rs;
-        mrpbutton.setAttribute("id","mrp-span");
+        mrpbutton.textContent = "MRP  ₹" + elem.rs;
+        mrpbutton.setAttribute("id", "mrp-span");
         var image2 = document.createElement("img");
-        image2.setAttribute("src","https://www.naturesbasket.co.in/Images/CartAddBtn.PNG");
-        image2.setAttribute("id","trolley-img")
-        div2.append(mrpbutton,image2);
-        outerdiv.append(image,span1,title,quantity,div2);
+        image2.setAttribute("src", "https://www.naturesbasket.co.in/Images/CartAddBtn.PNG");
+        image2.setAttribute("id", "trolley-img")
+        div2.append(mrpbutton, image2);
+        div2.addEventListener("click", function () {
+            addtocart(elem);
+        });
+        outerdiv.append(image, span1, title, quantity, div2);
         document.querySelector("#items-flex").append(outerdiv);
-})
+    })
 }
-document.querySelector("#items-count").textContent = proddata.length+" Products.";
+document.querySelector("#items-count").textContent = proddata.length + " Products.";
 
-function pricesort(){
+function pricesort() {
     var selected = document.querySelector("#relevance-sort").value;
-    if(selected == "high"){
-        var descending = proddata.sort(function(a,b){
+    if (selected == "high") {
+        var descending = proddata.sort(function (a, b) {
             return Number(b.rs) - Number(a.rs);
         })
         print(descending);
     }
-    else if(selected == "low"){
-        var ascending = proddata.sort(function(a,b){
+    else if (selected == "low") {
+        var ascending = proddata.sort(function (a, b) {
             return Number(a.rs) - Number(b.rs);
         })
         print(ascending);
@@ -46,28 +49,35 @@ function pricesort(){
 }
 
 var displayCategory = localStorage.getItem("filteredCategory") || "All";
-if(displayCategory == "fruits and vegetables"){
-   var arr = JSON.parse(localStorage.getItem("fgdatabase"));
-   var filteredArr = arr.filter(function(elem){
-       return elem.cat == displayCategory;
-   });
-   print(filteredArr);
-   document.querySelector("#items-count").textContent = filteredArr.length+" Products.";
-   document.querySelector("#selected-category-name").textContent = "Fruit and Vegetables";
-   
-}
-else if(displayCategory == "grocery"){
+if (displayCategory == "fruits and vegetables") {
     var arr = JSON.parse(localStorage.getItem("fgdatabase"));
-   var filteredArr = arr.filter(function(elem){
-       return elem.cat == displayCategory;
-   });
-//    console.log(filteredArr);
-   print(filteredArr);
-   document.querySelector("#items-count").textContent = filteredArr.length+" Products.";
-   document.querySelector("#selected-category-name").textContent = "Groceries";
-   
+    var filteredArr = arr.filter(function (elem) {
+        return elem.cat == displayCategory;
+    });
+    print(filteredArr);
+    document.querySelector("#items-count").textContent = filteredArr.length + " Products.";
+    document.querySelector("#selected-category-name").textContent = "Fruit and Vegetables";
+
 }
-document.querySelector("#go-to-home").addEventListener("click",gotohome);
-function gotohome(){
-    window.location.href="../Landing Page (O)/index.html";
+else if (displayCategory == "grocery") {
+    var arr = JSON.parse(localStorage.getItem("fgdatabase"));
+    var filteredArr = arr.filter(function (elem) {
+        return elem.cat == displayCategory;
+    });
+    //    console.log(filteredArr);
+    print(filteredArr);
+    document.querySelector("#items-count").textContent = filteredArr.length + " Products.";
+    document.querySelector("#selected-category-name").textContent = "Groceries";
+
+}
+document.querySelector("#go-to-home").addEventListener("click", gotohome);
+function gotohome() {
+    window.location.href = "../Landing Page (O)/index.html";
+}
+
+
+var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
+function addtocart(elem) {
+    cartArr.push(elem);
+    localStorage.setItem("cartDatabase", JSON.stringify(cartArr));
 }

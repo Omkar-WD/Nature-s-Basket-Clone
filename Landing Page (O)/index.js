@@ -29,15 +29,15 @@ var headerMenus = [
     },
     {
         name: "Cart",
-        href: "#cart",
+        href: "../Cart (R)/Cart.html",
     },
     {
         name: "Login",
-        href: "#login",
+        href: "../Login (K)/login.html",
     },
     {
         name: "SignUp",
-        href: "#signup",
+        href: "../SignUp (K)/signUp.html",
     },
 ];
 
@@ -211,7 +211,7 @@ function addLoadEvent(func) {
 addLoadEvent(slideShow);
 addLoadEvent(blogSlideShow);
 
-function filteredCategory(){
+function filteredCategory() {
     var selectedCategory = document.querySelector("#category-filter").value;
     // if(selectedCategory == "All"){
     //     window.location.href="../Category (P)/category.html";
@@ -220,6 +220,6 @@ function filteredCategory(){
 
     // }
     localStorage.setItem("filteredCategory", selectedCategory);
-    window.location.href="../Category (P)/category.html";
+    window.location.href = "../Category (P)/category.html";
 
 }

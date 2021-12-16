@@ -210,16 +210,3 @@ function addLoadEvent(func) {
 };
 addLoadEvent(slideShow);
 addLoadEvent(blogSlideShow);
-
-function filteredCategory(){
-    var selectedCategory = document.querySelector("#category-filter").value;
-    // if(selectedCategory == "All"){
-    //     window.location.href="../Category (P)/category.html";
-    // }
-    // else if(selectedCategory == "fruits and vegetables"){
-
-    // }
-    localStorage.setItem("filteredCategory", selectedCategory);
-    window.location.href="../Category (P)/category.html";
-
-}

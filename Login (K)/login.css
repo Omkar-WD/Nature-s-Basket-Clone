@@ -1,0 +1,89 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-content: center;
+    width: 400px;
+    height: 600px;
+    margin: auto;
+}
+#logo{
+    margin: 0 auto;
+}
+
+.login_container {
+    background-color: white;
+    text-align: center;
+    border: 5px solid #82ba3c;
+    border-radius: 10px;
+    width: 95%;
+    padding: 20px 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    font-family: cursive;
+    color: #82ba3c;
+}
+
+label {
+    color: black;
+    display: block;
+    margin: 10px 0;
+}
+
+input {
+    border: 2px solid #82ba3c;
+    padding: 10px 10px;
+    width: 90%;
+}
+
+#loginButton {
+    margin-top: 20px;
+    width: 96%;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color:#82ba3c;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+#loginButton:hover {
+    background-color:white;
+    border: 2px solid #82ba3c;
+    color: #82ba3c;
+}
+
+#signupButton > button{
+    padding: 10px 20px;
+    background-color: #82ba3c;
+    color: black;
+    font-size: 14px;
+    font-weight: bolder;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#signupButton > button:hover{
+    background-color: white;
+    color:  #82ba3c;
+}
+
+@media only screen and (min-width:375px) and (max-width:768px) {
+    .container {
+        width: 50%;
+    }
+
+    .login_container {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width:0) and (max-width:375px) {
+    .container {
+        width: 90%;
+    }
+
+    .login_container {
+        width: auto;
+    }
+}

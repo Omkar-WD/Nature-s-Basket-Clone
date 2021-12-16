@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .header {
+            overflow: hidden;
+            padding: 10px 10px;
+            /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+            box-shadow: rgba(130, 186, 60, 0.4) 0px 4px 6px -1px, rgba(130, 186, 60, 0.6) 0px 2px 4px -1px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: white;
+
+        }
+
+        .header-right a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+
+        .header a:hover {
+            /* background-color: #ddd; */
+            color: #82ba3c;
+        }
+
+        .header-right {
+            float: right;
+        }
+
+        #company-logo {
+            width: 15%;
+            padding: 0 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .categories {
+            margin: 20px 0 10px 20px;
+        }
+
+        .content {
+            padding: 20px;
+            display: grid;
+            align-content: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 180px;
+            grid-gap: 20px;
+        }
+
+        .content>div {
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+
+        .content>div>div {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .events {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .events>div {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .events>div>img {
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .para_info {
+            margin: 0 20px;
+            text-align: justify;
+        }
+
+        .download_app {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .footer {
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* background-color: #cecece; */
+            background-color: #82ba3c;
+            padding: 10px;
+        }
+
+        .footer>div {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            text-align: center;
+        }
+
+        .footer>div a,
+        .footer>div p {
+            color: black;
+            text-decoration: none;
+            line-height: 25px;
+            font-weight: bolder;
+        }
+
+        .footer>div a:hover {
+            color: #82ba3c;
+        }
+
+        .footerIcon {
+            width: 15%;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href=""><img id="company-logo" src="logo.png" alt=""></a>
+        <div class="header-right">
+            <a href="#blogs">Blogs</a>
+            <a href="#offers">Offers</a>
+            <a href="#book-offer-visit">Book Store Visit</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#favourite">Favourite</a>
+            <a href="#past-purchases">Past Purchases</a>
+            <a href="#cart">Cart</a>
+            <a href="#login/signup">Login/SignUp</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="categories">
+            <select name="" id="">
+                <option value="">Shop by category</option>
+            </select>
+        </div>
+        <div class="content">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsam dolores esse exercitationem minus
+                    laudantium deserunt dolor enim explicabo adipisci? Fuga necessitatibus adipisci nam ratione eligendi
+                    inventore voluptas vero earum.</p>
+            </div>
+        </div>
+        <div class="events">
+            <h1>Our Events</h1>
+            <div>
+                <img src="event1.jpg" alt="">
+                <img src="event1.jpg" alt="">
+                <img src="event1.jpg" alt="">
+                <img src="event1.jpg" alt="">
+            </div>
+        </div>
+        <div class="para_info">
+            <h3>Online Grocery Store India</h3>
+            <p>Nature’s Basket is a grocery store operating in Mumbai, Bangalore and Pune with deliveries to all cities
+                across
+                India including Hyderabad, Delhi, Kolkata, Chennai, Surat and more. We offer a wide range of food
+                products
+                for
+                all your everyday needs and even offer grocery home delivery as well as a grocery shop online for you to
+                purchase from. Our online grocery store has fresh fruits and vegetables, fresh and frozen meats and
+                seafood,
+                a
+                wide range of breads and other packaged bakery products as well as a range of fresh cheeses from around
+                the
+                world. We even have a range of every staple and international cuisine product to meet your needs along
+                with
+                organic products for fresh and packaged food items. With our offerings, we have the best online food
+                shop &
+                online grocery shopping platform available for all your grocery products as well as physical grocery
+                stores
+                in
+                select cities.</p>
+
+            <h3>Best Online Grocery Supermarket India</h3>
+
+            <p>With stores in Mumbai, Pune and Bangalore and online delivery services, you can now have all your grocery
+                supermarket shopping done online. We have a wide range of grocery products to offer at our stores for
+                you to
+                buy
+                groceries from a channel convenient to you. Choose from fresh produce to packaged goods, buy groceries
+                online
+                and get them delivered straight to your doorstep, thus making it a convenient and quick process. You can
+                pay
+                for
+                the shopping using credit cards, cash, coupons or online banking facility. We are sure to have all the
+                grocery
+                products for your daily dietary needs from regular local Indian brands and products to exotic and
+                international
+                imported ones.</p>
+
+            <h3>Online Grocery Supermarket Shopping India</h3>
+            <p>With our wide range of groceries available, Nature’s Basket is a large online supermarket and grocery
+                store
+                for
+                all your everyday food needs. We offer you the best quality grocery products which you can buy online
+                and
+                have
+                them delivered to you conveniently. We have our grocery stores in Mumbai, Pune and Bangalore where you
+                can
+                buy
+                groceries and food items. We also have the best online grocery store to shop for fruits and vegetables,
+                meats
+                and seafood, breads and other bakery items as well as cheese and dairy. Order groceries online from the
+                best
+                quality grocery store at best prices.
+
+                Find a variety of Best Christmas gifts such as delightful Cakes, Chocolates, Cookies, Turkey, Stollen,
+                Gourmet
+                Gift Baskets, Sweets & Lots More Here</p>
+        </div>
+    </div>
+    <div class="download_app">
+        <h1>Download The App</h1>
+        <img class="footerIcon" src="googlePlay.svg" alt="">
+        <img class="footerIcon" src="appStore.svg" alt="">
+    </div>
+    <div class="footer">
+        <div>
+            <h4>ABOUT US</h4>
+            <a href="">About Us</a>
+            <a href="">Our Vision & Purpose</a>
+            <a href="">Quality standards</a>
+            <a href="">Awards</a>
+            <a href="">FAQs</a>
+            <a href="">Available Delivery Slot</a>
+            <a href="">Vendor Connect</a>
+        </div>
+        <div>
+            <h4>OUR POLICIES</h4>
+            <a href="">Privacy Policy</a>
+            <a href="">Payment Policy</a>
+            <a href="">Disclaimer</a>
+            <a href="">Statutory Compliance</a>
+            <a href="">Data Protection Policy</a>
+            <a href="">Grievance Officer</a>
+            <a href="">Information Security Policy</a>
+        </div>
+        <div>
+            <h4>NEWS & MEDIA</h4>
+            <a href="">Press releases</a>
+            <a href="">Newsletters</a>
+            <a href="">Events</a>
+            <a href="">Photo gallery</a>
+            <a href="">Recipes</a>
+            <a href="">NBTV</a>
+            <a href="">Our Virtual Store</a>
+        </div>
+        <div>
+            <h4>CONTACT US</h4>
+            <p>cs@naturesbasket.co.in</p>
+            <p>+9188800 77745​</p>
+            <p>Office Time: 09.00 am to 09.00 pm</p>
+        </div>
+        <div>
+            <h4>KEEP IN TOUCH</h4>
+            <div>
+                <img src="https://img.icons8.com/material-outlined/48/000000/facebook-new.png" />
+                <img src="https://img.icons8.com/material-outlined/48/000000/twitter-squared.png" />
+            </div>
+            <div>
+                <img src="https://img.icons8.com/material-outlined/48/000000/youtube--v2.png" />
+                <img src="https://img.icons8.com/material-outlined/48/000000/linkedin--v2.png" />
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

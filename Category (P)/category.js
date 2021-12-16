@@ -44,4 +44,30 @@ function pricesort(){
         print(ascending);
     }
 }
-document.querySelector("#divSearch > div.filter-product-body > div.divLeftSearchSideBar")
+
+var displayCategory = localStorage.getItem("filteredCategory") || "All";
+if(displayCategory == "fruits and vegetables"){
+   var arr = JSON.parse(localStorage.getItem("fgdatabase"));
+   var filteredArr = arr.filter(function(elem){
+       return elem.cat == displayCategory;
+   });
+   print(filteredArr);
+   document.querySelector("#items-count").textContent = filteredArr.length+" Products.";
+   document.querySelector("#selected-category-name").textContent = "Fruit and Vegetables";
+   
+}
+else if(displayCategory == "grocery"){
+    var arr = JSON.parse(localStorage.getItem("fgdatabase"));
+   var filteredArr = arr.filter(function(elem){
+       return elem.cat == displayCategory;
+   });
+//    console.log(filteredArr);
+   print(filteredArr);
+   document.querySelector("#items-count").textContent = filteredArr.length+" Products.";
+   document.querySelector("#selected-category-name").textContent = "Groceries";
+   
+}
+document.querySelector("#go-to-home").addEventListener("click",gotohome);
+function gotohome(){
+    window.location.href="../Landing Page (O)/index.html";
+}

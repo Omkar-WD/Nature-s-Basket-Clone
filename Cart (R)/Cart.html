@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+</head>
+
+<body>
+    <div class="cart_container">
+        <div class="cart_nav">
+            <div>
+                <p>My Cart Items : <b><label id="cart-items-count">0</b></label></p>
+            </div>
+            <div>
+                <button>CONTINUE SHOPPING</button> <button>PROCEED TO CHECKOUT</button>
+            </div>
+        </div>
+        <p>GET YOUR ORDER DELIVERED TODAY</p>
+        <div class="cart_data_table">
+            <table>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Discount</td>
+                        <td>Qty</td>
+                        <td>Sub-Total</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="checkout">
+            <div>
+                <input type="text" placeholder="enter promo code here" id="promoCode" />
+                <button onclick="applyPromo()">Apply Promo</button>
+            </div>
+            <div class="total_amount">
+                <p>Sub Total : <label id="sub-total">00</label></p>
+                <p>Delivery Charges : <label>50.00</label></p>
+                <p>Discount : <label id="discount">00</label></p>
+                <p><b>Total : <label id="total">50.00</label></b></p>
+            </div>
+        </div>
+        <div class="cart_nav_bottom">
+            <button>CONTINUE SHOPPING</button> <button>PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="Cart.js">
+</script>

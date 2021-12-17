@@ -80,3 +80,9 @@ function displayTable(arr) {
         document.querySelector("tbody").append(tr);
     });
 }
+document.querySelector("#homepage-button").addEventListener("click",function(){
+    window.location.href = "../Category (P)/category.html";
+})
+document.querySelector("#homepage-button1").addEventListener("click",function(){
+    window.location.href = "../Category (P)/category.html";
+})

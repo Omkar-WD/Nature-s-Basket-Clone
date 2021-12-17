@@ -1,0 +1,119 @@
+.container {
+  padding: 20px;
+}
+
+.sub_menu {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: right;
+  border-bottom: 2px solid #82ba3c;
+}
+
+.sub_menu > button {
+  padding: 5px 10px;
+  color: white;
+  background-color: #82ba3c;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.sub_menu > button:hover {
+  background-color: #436b12;
+}
+
+#items-flex {
+  font-family: "CeraPRO-Light", CeraPRO-Regular;
+  font-weight: 200;
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+#items-flex > div {
+  height: 460px;
+  width: 266px;
+  margin: 5px 1px;
+  padding: 10px 10px;
+  text-align: center;
+  border-right: 0.1px solid rgb(236, 236, 236);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+#items-flex > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#items-flex > div > img {
+  width: 100%;
+  height: 60%;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#item-name:hover {
+  color: #880033;
+  cursor: pointer;
+}
+
+#del-span {
+  border: 1px solid #880033;
+  border-radius: 10px;
+  font-size: x-small;
+  color: #880033;
+  padding: 5px 10px;
+  font-family: "CeraPRO-Light", CeraPRO-Regular;
+  font-weight: bolder;
+}
+
+#mrp-span {
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-weight: 400;
+  padding: 5px 10px;
+}
+
+#rate-cart {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  border: 1px solid transparent;
+  align-items: center;
+  margin: auto;
+}
+
+#trolley-img {
+  border: 1px solid #b2fa59;
+  background-color: #a3f83c;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+#trolley-img:hover {
+  background-color: #467909;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 0) and (max-width: 376px) {
+  .container {
+    padding: 10px;
+  }
+  #items-flex {
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  #items-flex {
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}

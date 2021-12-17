@@ -1,0 +1,80 @@
+.container {
+  padding: 20px;
+}
+input {
+  margin-top: 10px;
+  padding: 2px;
+}
+button {
+  padding: 2px 10px;
+  color: white;
+  background-color: #82ba3c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #436b12;
+}
+.past_purchase_data_table {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1pt solid #82ba3c;
+}
+
+td {
+  padding: 20px 40px;
+  text-align: center;
+}
+.sub-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #82ba3c;
+  align-items: end;
+}
+.sub-menu > button {
+}
+@media only screen and (min-width: 0) and (max-width: 376px) {
+  .container {
+    padding: 0;
+  }
+  .past_purchase_data_table {
+    overflow-x: scroll;
+    display: inline-block;
+  }
+
+  td {
+    min-width: 200px;
+    padding: 10px 0;
+  }
+  .sub-menu {
+    flex-direction: column;
+  }
+  .sub-menu > button {
+    margin: 30px auto 0 auto;
+    width: 40%;
+  }
+  #all-order-button {
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .past_purchase_data_table {
+    overflow-x: scroll;
+  }
+
+  td {
+    padding: 10px;
+  }
+}

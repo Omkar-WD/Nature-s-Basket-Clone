@@ -1,0 +1,36 @@
+
+    .container{
+        margin: auto;
+        border-radius: 10px;
+        width: 70%;
+        border: 1px solid grey;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #myForm{
+        width: 50%;
+        border-right: 1px solid black;
+    }
+    #myForm>input{
+        border-radius: 2px;
+        border: 1px solid grey;
+    }
+    #myForm>span{
+        font-size: 15px;
+    }
+    #btn{
+        padding:5px 10px;
+        border-radius: 3px;
+        background-color: rgb(146, 190, 70);
+        color: white;
+        border: 1px solid grey;
+    }
+    .container>h3{
+        background-color:rgb(146, 190, 70);
+        padding:15px;
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 5px;
+        color: white;
+    }

@@ -1,0 +1,114 @@
+
+    #container {
+        width: 60%;
+        display: grid;
+        border: 1px solid grey;
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+        border-radius: 5px;
+      }
+      .firstside {
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 1px solid blue transparent;
+      }
+      .firstside > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        font-size: 8px;
+        background-color: rgb(146, 190, 70);
+        border-radius: 3px;
+        padding: 5px 10px;
+
+        border: 1px solid blue transparent;
+      }
+      .firstside > div > button {
+        border-radius: 3px;
+        padding: 0px 5px;
+        font-size: 7px;
+        border: 1px solid rgb(19, 18, 18);
+        background-color: white;
+        border: 1px solid blue transparent;
+      }
+      .firstside > p {
+        font-size: 7px;
+      }
+      .Secondside {
+        padding: 11px;
+      }
+      .Secondside > div {
+        display: flex;
+        font-size: 7px;
+        justify-content: space-between;
+      }
+      .Secondside > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+      }
+      #language {
+        font-size: 8px;
+        padding: 0px;
+        border-radius: 5px;
+      }
+      .Secondside > div:nth-child(1) {
+        background-color: rgb(146, 190, 70);
+        border-radius: 3px;
+        padding: 6px 12px;
+      }
+
+      .btn > button {
+        width: 80%;
+        margin-left: 40px;
+        padding: 8px;
+        border-radius: 5px;
+        border: 0px;
+        background-color: rgb(23, 153, 204);
+        color: white;
+      }
+      .newcard > form > input {
+        width: 90%;
+        border-radius: 3px;
+        border: 1px solid black;
+        padding: 5px;
+      }
+      .newcard > form > p {
+        font-size: 10px;
+      }
+      .exp,
+      .sides {
+        display: flex;
+      }
+      .sides > p {
+        font-size: 10px;
+      }
+      .exp > input:nth-child(2) {
+        margin-left: 10px;
+      }
+      .exp > input {
+        border: 1px solid black;
+        border-radius: 3px;
+      }
+      .sides > p:nth-child(2) {
+        padding-left: 125px;
+      }
+
+      @media only screen and (min-width: 375px) and (max-width: 768px) {
+        #container {
+          width: 100%;
+          display: grid;
+          border: 1px solid grey;
+          grid-template-columns: repeat(1, 1fr);
+          margin: auto;
+          border-radius: 5px;
+        }
+      }
+      @media only screen and (min-width: 0px) and (max-width: 375px) {
+        #container {
+          width: 100%;
+          display: grid;
+          border: 1px solid grey;
+          grid-template-columns: repeat(1, 1fr);
+          margin: auto;
+          border-radius: 5px;
+        }
+      }

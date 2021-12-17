@@ -1,4 +1,6 @@
 var proddata = JSON.parse(localStorage.getItem("fgdatabase")) || [];
+var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
+document.querySelector("#go-to-cart").textContent = "Cart [ " + cartArr.length+" ]";
 print(proddata);
 function print(arr) {
     document.querySelector("#items-flex").textContent = "";
@@ -80,4 +82,33 @@ var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
 function addtocart(elem) {
     cartArr.push(elem);
     localStorage.setItem("cartDatabase", JSON.stringify(cartArr));
+    document.querySelector("#go-to-cart").textContent = "Cart [ " + cartArr.length+" ]";
+}
+
+document.querySelector("#go-to-cart").addEventListener("click",function(){
+    window.location.href = "../Cart (R)/Cart.html"
+
+})
+
+function filteredCategory(){
+    var selected = document.querySelector("#category-filter").value;
+    if(selected == "All" || selected == ""){
+        print(proddata);
+        document.querySelector("#items-count").textContent = proddata.length + " Products.";
+    document.querySelector("#selected-category-name").textContent = "All";
+    }
+    else{
+    var categoryFiltered = proddata.filter(function(elem){
+        return elem.cat == selected;
+        
+    })
+    print(categoryFiltered);
+    document.querySelector("#items-count").textContent = categoryFiltered.length + " Products.";
+    if(selected == "fruits and vegetables"){
+    document.querySelector("#selected-category-name").textContent = "Fruits and Vegetables";
+    }
+    else if(selected == "grocery"){
+    document.querySelector("#selected-category-name").textContent = "Groceries";
+    }
+}
 }

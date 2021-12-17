@@ -7,6 +7,7 @@ th,td{
     font-style: normal;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 50px;
 
 }
 #items-flex > div{
@@ -29,6 +30,7 @@ th,td{
 }
 #item-name:hover{
     color: #880033;
+    cursor: pointer;
 }
 #del-span{
     border:1px solid #880033;
@@ -55,9 +57,13 @@ th,td{
 }
 #trolley-img{
     border: 1px solid #b2fa59;
-    background-color: #7fc42b;
+    background-color: #a3f83c;
     padding: 5px 10px;
     border-radius: 10px;
+}
+#trolley-img:hover{
+    background-color: #467909;
+    cursor: pointer;
 }
 #price-sort{
     width: 100%;
@@ -136,15 +142,38 @@ h3{
     line-height: 0px;
     padding: 20px 20px;
     background-color: #7fc42b;
+    cursor: pointer;
 }
 .filter_s > label:hover{
     color: #7fc42b;
+    cursor: pointer;
 }
-#go-to-home{
-    margin-left: 90%;
+#home-cart{
+    display: flex;
+    justify-content: right;
+}
+#go-to-home,#go-to-cart{
+    margin-right: 10px;
     border-radius: 5px;
     background-color: #7fc42b;
+    padding: 5px 10px;
 }
+#go-to-home:hover,#go-to-cart:hover{
+    background-color: #467909;
+    cursor: pointer;
+}
+#relevance-sort{
+    cursor: pointer;
+}
+#two-filters{
+    display: flex;
+    flex-wrap: wrap;
+}
+#category-filter{
+    padding: 5px 10px;
+    margin: 5px;
+}
+
 @media only screen and (min-width:0) and (max-width:376px){
     #filter-functionalites{
         display: none;
@@ -154,9 +183,6 @@ h3{
         text-align: center;
         justify-content: center;
         margin-top: 100px;
-    }
-    #go-to-home{
-        margin-left: 70%;
     }
     #selected-category-name{
         font-size: 12px;
@@ -173,10 +199,9 @@ h3{
         justify-content: center;
         margin-top: 50px;
     }
-    #go-to-home{
-        margin-left: 85%;
-    }
 }
+
+
 
 
 

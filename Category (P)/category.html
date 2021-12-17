@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Products</title>
     <link rel="stylesheet" href="category.css">
 </head>
 <body>
@@ -69,8 +69,17 @@
                         <span id="selected-category-name">All</span>
                         <span id="items-count"></span>
                     </div>
+                   
                     
-                    <div>
+                    <div id="two-filters">
+                        <div class="categories">
+                            <select id="category-filter" onchange="filteredCategory()">
+                                <option value="">Shop by category</option>
+                                <option value="All">All</option>
+                                <option value="fruits and vegetables">Fruits and Vegetables</option>
+                                <option value="grocery">Groceries</option>
+                            </select>
+                        </div>&emsp;
                         <select id="relevance-sort" onchange="pricesort()">
                             <option value= "">Relevance</option>
                             <option value="high">price high to low</option>
@@ -78,7 +87,12 @@
                         </select>
                     </div>
                 </div>
-                <button id="go-to-home">Go To Home</button>
+                <div id="home-cart">
+                    
+                    <button id="go-to-home">Go To Home</button>&emsp;
+                    <button id="go-to-cart"></button>
+                    
+                </div>
                 <hr>
                 <p>Explore</p>
             </div>

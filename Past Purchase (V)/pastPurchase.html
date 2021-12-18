@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cart</title>
-    <link rel="stylesheet" href="Cart.css">
+    <title>Past Purchase</title>
+    <link rel="stylesheet" href="pastPurchase.css">
 </head>
 
 <body>
@@ -15,47 +15,32 @@
         <div class="header-right">
         </div>
     </div>
-    <div class="cart_container">
-        <div class="cart_nav">
+    <div class="container">
+        <h3>PAST PURCHASE</h3>
+        <div class="sub-menu">
             <div>
-                <p>My Cart Items : <b><label id="cart-items-count">0</b></label></p>
+                <label>Search Order ID :</label><br>
+                <input id="order-search" type="search" placeholder="enter last digit" />&emsp;<button
+                    id="search-button">Search</button>
+                <button id="all-order-button" onclick="allOrders()">All Orders</button>
             </div>
-            <div>
-                <button id="homepage-button">CONTINUE SHOPPING</button> <button>PROCEED TO CHECKOUT</button>
-            </div>
+            <button id="go-to-home">Go To Home</button>
         </div>
-        <p>GET YOUR ORDER DELIVERED TODAY</p>
-        <div class="cart_data_table">
+        <div class="past_purchase_data_table">
             <table>
                 <thead>
                     <tr>
                         <td>#</td>
-                        <td>Name</td>
-                        <td>Price</td>
-                        <td>Discount</td>
-                        <td>Qty</td>
-                        <td>Sub-Total</td>
-                        <td></td>
+                        <td>Date</td>
+                        <td>Order ID</td>
+                        <td>Amount</td>
+                        <td>Payment Status</td>
+                        <td>Payment Mode</td>
                     </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
-        </div>
-        <div class="checkout">
-            <div>
-                <input type="text" placeholder="enter promo code here" id="promoCode" />
-                <button onclick="applyPromo()">Apply Promo</button>
-            </div>
-            <div class="total_amount">
-                <p>Sub Total : <label id="sub-total">00</label></p>
-                <p>Delivery Charges : <label>50.00</label></p>
-                <p>Discount : <label id="discount">00</label></p>
-                <p><b>Total : <label id="total">50.00</label></b></p>
-            </div>
-        </div>
-        <div class="cart_nav_bottom">
-            <button id="homepage-button1">CONTINUE SHOPPING</button> <button>PROCEED TO CHECKOUT</button>
         </div>
     </div>
     <div class="footer">
@@ -115,5 +100,8 @@
 </body>
 
 </html>
-<script src="Cart.js">
+
+
+<script src="pastPurchase.js">
+
 </script>

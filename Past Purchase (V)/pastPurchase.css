@@ -1,0 +1,172 @@
+body{
+  margin: 0;
+}
+.header {
+  overflow: hidden;
+  padding: 10px 10px;
+  box-shadow: rgba(130, 186, 60, 0.4) 0px 4px 6px -1px, rgba(130, 186, 60, 0.6) 0px 2px 4px -1px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+
+}
+
+.header-right a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header a:hover {
+  color: #82ba3c;
+  text-decoration: underline;
+}
+
+.header-right {
+  float: right;
+}
+
+#company-logo {
+  width: 15%;
+  padding: 0 10px;
+}
+.container {
+  padding: 20px;
+}
+input {
+  margin-top: 10px;
+  padding: 2px;
+}
+button {
+  padding: 2px 10px;
+  color: white;
+  background-color: #82ba3c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #436b12;
+}
+.past_purchase_data_table {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1pt solid #82ba3c;
+}
+
+td {
+  padding: 20px 40px;
+  text-align: center;
+}
+.sub-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #82ba3c;
+  align-items: end;
+}
+.footer {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #82ba3c;
+  padding: 10px;
+}
+
+.footer>div {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  text-align: center;
+}
+
+.footer>div a,
+.footer>div p {
+  color: black;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.footer>div a:hover {
+  color: white;
+}
+/* .sub-menu > button {
+} */
+@media only screen and (min-width: 0) and (max-width: 376px) {
+  .header {
+    text-align: center;
+}
+
+#company-logo {
+    width: 80%;
+}
+  .container {
+    padding: 0;
+  }
+  .past_purchase_data_table {
+    overflow-x: scroll;
+    display: inline-block;
+  }
+
+  td {
+    min-width: 200px;
+    padding: 10px 0;
+  }
+  .sub-menu {
+    flex-direction: column;
+  }
+  .sub-menu > button {
+    margin: 30px auto 0 auto;
+    width: 40%;
+  }
+  #all-order-button {
+    margin: 10px 0;
+  }
+  .footer {
+    justify-content: center;
+}
+
+.footer>div {
+    margin: 10px;
+}
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .header {
+    text-align: center;
+}
+
+#company-logo {
+    width: 80%;
+}
+  .past_purchase_data_table {
+    overflow-x: scroll;
+  }
+
+  td {
+    padding: 10px;
+  }
+  .footer {
+    justify-content: center;
+}
+
+.footer>div {
+    margin: 20px;
+}
+}

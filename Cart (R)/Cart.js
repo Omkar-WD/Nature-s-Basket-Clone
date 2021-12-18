@@ -152,15 +152,30 @@ document
 document
   .querySelector("#checkout-btn-top")
   .addEventListener("click", function () {
-    localStorage.setItem("cartAmount", TotalInRs);
-    window.location.href = "../Payment (R)/inputAdd.html";
+    var isLogin = localStorage.getItem("isLogin");
+    if (TotalInRs == 50) {
+      alert("Plz Add items in Cart!!!");
+      window.location.href = "../Category (P)/category.html";
+    }
+    if (isLogin == "false") {
+      alert("Plz Login!!!");
+      window.location.href = "../Login (K)/login.html";
+    } else {
+      localStorage.setItem("cartAmount", TotalInRs);
+      window.location.href = "../Payment (R)/inputAdd.html";
+    }
   });
 document
   .querySelector("#checkout-btn-bottom")
   .addEventListener("click", function () {
+    var isLogin = localStorage.getItem("isLogin");
     if (TotalInRs == 50) {
       alert("Plz Add items in Cart!!!");
       window.location.href = "../Category (P)/category.html";
+    }
+    if (isLogin == "false") {
+      alert("Plz Login!!!");
+      window.location.href = "../Login (K)/login.html";
     } else {
       localStorage.setItem("cartAmount", TotalInRs);
       window.location.href = "../Payment (R)/inputAdd.html";

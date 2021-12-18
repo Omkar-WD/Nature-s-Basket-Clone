@@ -40,6 +40,7 @@ var headerMenus = [
     href: "../SignUp (K)/signUp.html",
   },
 ];
+
 headerMenus.map(function (elem) {
   var header = document.querySelector(".header-right");
   var aTag = document.createElement("a");
@@ -48,32 +49,10 @@ headerMenus.map(function (elem) {
   aTag.textContent = elem.name;
   header.append(aTag);
 });
-var pastPurchaseArr = [
-  {
-    date: "11/12/12",
-    orderId: "ORD00001",
-    amount: "500",
-    paymentStatus: "Paid",
-    paymentMode: "Cash",
-  },
-  {
-    date: "12/12/12",
-    orderId: "ORD00002",
-    amount: "500",
-    paymentStatus: "Paid",
-    paymentMode: "Cash",
-  },
-  {
-    date: "13/12/12",
-    orderId: "ORD00003",
-    amount: "500",
-    paymentStatus: "Paid",
-    paymentMode: "Cash",
-  },
-];
-localStorage.setItem("pastPurchaseDB", JSON.stringify(pastPurchaseArr));
-var orderId = 0;
+
+var pastPurchaseArr = JSON.parse(localStorage.getItem("pastPurchaseDB")) || [];
 displayTable(pastPurchaseArr);
+
 function displayTable(arr) {
   document.querySelector("tbody").innerHTML = "";
   arr.map(function (elem, ind) {

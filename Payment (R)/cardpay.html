@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="cardpay.css">
+</head>
+
+<body>
+  <div id="rp-logo">
+    <img src="rp.png" />
+  </div>
+  <div class="container">
+    <div class="container_left">
+      <div class="container_left_header">
+        <div>
+          <p><a href="paymentpage.html" id="back-button"><span>&#8656;</span> Back</a></p>
+        </div>
+        <div>
+          <p id="company-name">Nature's Basket</p>
+        </div>
+      </div>
+      <div class="container_left_content">
+        <h2>Enter Payment Card Details</h2>
+        <h3>Total Payable Amount Rs. <Label id="amount"></Label></h3>
+        <p>Transation Id:</p>
+      </div>
+    </div>
+    <div class="container_right">
+      <div class="container_left_header">
+        <div>
+          <h4>PAYMENT OPTIONS</h4>
+        </div>
+        <div>
+          <h4>
+            <select name="" id="language">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+      <div class="container_right_content">
+        <form id="myForm">
+          <table>
+            <tbody>
+              <tr>
+                <td>New Card</td>
+                <td><input id="card-number" type="text" placeholder="Enter Card Number" /></td>
+              </tr>
+              <tr>
+                <td>Expiry</td>
+                <td><input id="expiry-date" type="date" placeholder="MM/YY" /></td>
+              </tr>
+              <tr>
+                <td>CVV</td>
+                <td><input id="cvv" type="text" placeholder="Enter CVV" /></td>
+              </tr>
+              <tr>
+                <td>Name on Card</td>
+                <td> <input id="name" type="text" placeholder="Enter name as on card" /></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="" id="" /></td>
+                <td>Save this option security
+                  for faster payment</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="submit" id="submit" value="PROCEED" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="cardpay.js"></script>

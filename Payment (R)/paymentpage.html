@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="paymentpage.css">
+</head>
+
+<body>
+    <div id="rp-logo">
+        <img src="rp.png" />
+    </div>
+    <div id="container">
+        <div class="firstside">
+            <div>
+                <button id="back-button"><i class="fas fa-arrow-left"></i>Back</button>
+                <h2>NatureBasket</h2>
+            </div>
+            <h3>Choose a payment option</h3>
+            <h5>Total Payable amount Rs. <label id="amount"></label></h5>
+            <h6>Transaction Id : ORD3096840_1_1</h6>
+        </div>
+        <div class="Secondside">
+            <div>
+                <h2>PAYMENT OPTIONS</h2>
+                <select name="" id="language">
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Marathi">Marathi</option>
+                </select>
+            </div>
+
+            <div class="PayOpt">
+                <div>
+                    <button id="card">Cards(Credit/Debit)</button>
+                </div>
+                <div>
+                    <button id="upi">UPI</button>
+                </div>
+                <div>
+                    <button id="cod">Cash on Delivery</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="paymentpage.js"></script>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Page</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 500px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            margin-top: 100px;
+            width: 60%;
+            height: 100px;
+            background-color:
+                #82ba3c;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .content {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 60%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 60%;
+            height: 100px;
+            background-color:
+                #82ba3c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer:hover {
+            background-color: #426814;
+        }
+
+        #rp-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #rp-logo>img {
+            width: 70%;
+        }
+
+        @media only screen and (min-width:0) and (max-width:375px) {
+            .container {
+                width: 100%;
+            }
+
+            #rp-logo>img {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width:376px) and (max-width:768px) {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="rp-logo">
+                <img src="rp-1.png" />
+            </div>
+        </div>
+        <div class="content">
+            <label>Enter OTP &emsp;<input type="number" id="otp"></label>
+        </div>
+        <button class="footer" onclick="otpCorrect()">
+            <h3>VERIFY</h3>
+        </button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function otpCorrect() {
+        var otp = document.querySelector("#otp").value;
+        var paymentMode = localStorage.getItem("paymentMode");
+        if (otp == "1234") {
+            if (paymentMode == "COD") {
+                alert("Thank You!!!")
+            }
+            else {
+                alert("payment successful");
+            }
+            var cartArr = [];
+            var pastPurchaseArr = JSON.parse(localStorage.getItem("pastPurchaseDB")) || [];
+            var cartAmount = localStorage.getItem("cartAmount");
+            var paymentDate = localStorage.getItem("paymentDate");
+            var paymentMode = localStorage.getItem("paymentMode");
+            var orderId = Number(localStorage.getItem("orderId")) || 0;
+            orderId += 1;
+            localStorage.setItem("orderId", orderId);
+            var obj = {
+                amount: cartAmount,
+                date: paymentDate,
+                orderId: "ORD00000" + (orderId),
+                paymentMode: paymentMode,
+                paymentStatus: "Paid",
+            };
+            pastPurchaseArr.push(obj);
+            localStorage.setItem("cartDatabase", JSON.stringify(cartArr));
+            localStorage.setItem("pastPurchaseDB", JSON.stringify(pastPurchaseArr));
+            window.location.href = "Success.html"
+        }
+        else {
+            alert("Invalid OTP");
+        }
+    }
+</script>

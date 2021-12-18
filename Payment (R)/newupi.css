@@ -1,0 +1,102 @@
+#rp-logo {
+  margin: auto;
+  width: fit-content;
+}
+
+.container {
+  border: 5px solid #82ba3c;
+  padding: 20px 30px;
+  margin: 20px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.container_left,
+.container_right {
+  width: 50%;
+  margin: 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container_left:hover,
+.container_right:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.container_left_header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container_left_header > div {
+  margin: 0 10px;
+}
+
+.container_left_content {
+  margin: 0 10px;
+}
+
+#back-button {
+  color: black;
+  text-decoration: none;
+}
+
+#back-button:hover {
+  color: #82ba3c;
+}
+
+#company-name {
+  color: #82ba3c;
+  font-weight: bolder;
+}
+table,
+th,
+td {
+  border: 1px solid #82ba3c;
+  border-collapse: collapse;
+  text-align: center;
+  font-weight: bold;
+}
+
+tr,
+td {
+  margin: auto;
+  padding: 5px 0px;
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: #82ba3c;
+  color: white;
+}
+
+#bp,
+#payTm,
+#gpay,
+#ppay {
+  width: 20%;
+}
+
+td img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .container_left {
+    width: 100%;
+    margin: 0;
+  }
+
+  .container_right {
+    width: 100%;
+    margin: 10px auto;
+  }
+}

@@ -1,6 +1,19 @@
 body {
   margin: 0;
 }
+.star {
+  border-radius: 1px solid#880033;
+  color: #880033;
+  background-color: transparent;
+  margin-left: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.star:hover {
+  color: white;
+  background-color: #82ba3c;
+}
 .header {
   overflow: hidden;
   padding: 10px 10px;
@@ -64,6 +77,7 @@ td {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
+  justify-content: space-between;
 }
 #items-flex > div {
   height: 460px;

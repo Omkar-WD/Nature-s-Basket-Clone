@@ -48,6 +48,7 @@ headerMenus.map(function (elem) {
   aTag.textContent = elem.name;
   header.append(aTag);
 });
+
 var proddata = JSON.parse(localStorage.getItem("fgdatabase")) || [];
 var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
 document.querySelector("#go-to-cart").textContent =
@@ -60,6 +61,30 @@ function print(arr) {
     var image = document.createElement("img");
     image.setAttribute("src", elem.img);
     var span1 = document.createElement("span");
+    var button = document.createElement("button");
+    button.setAttribute("class", "star");
+    button.textContent = "Add To Fav";
+    button.addEventListener("click", function () {
+      if (button.textContent == "Remove Fav") {
+        button.textContent = "Add To Fav";
+        var favouriteItemsArr =
+          JSON.parse(localStorage.getItem("favouriteItemsDB")) || [];
+        favouriteItemsArr.splice(ind, 1);
+        localStorage.setItem(
+          "favouriteItemsDB",
+          JSON.stringify(favouriteItemsArr)
+        );
+      } else {
+        button.textContent = "Remove Fav";
+        var favouriteItemsArr =
+          JSON.parse(localStorage.getItem("favouriteItemsDB")) || [];
+        favouriteItemsArr.push(elem);
+        localStorage.setItem(
+          "favouriteItemsDB",
+          JSON.stringify(favouriteItemsArr)
+        );
+      }
+    });
     span1.textContent = "DELIVERY IN 90 MINUTES";
     span1.setAttribute("id", "del-span");
     var title = document.createElement("p");
@@ -82,7 +107,7 @@ function print(arr) {
     div2.addEventListener("click", function () {
       addtocart(elem);
     });
-    outerdiv.append(image, span1, title, quantity, div2);
+    outerdiv.append(image, span1, button, title, quantity, div2);
     document.querySelector("#items-flex").append(outerdiv);
   });
 }
@@ -139,10 +164,9 @@ function addtocart(elem) {
     "Cart [ " + cartArr.length + " ]";
 }
 
-// document.querySelector("#go-to-cart").addEventListener("click",function(){
-//     window.location.href = "../Cart (R)/Cart.html"
-
-// })
+document.querySelector("#go-to-cart").addEventListener("click", function () {
+  window.location.href = "../Cart (R)/Cart.html";
+});
 
 function filteredCategory() {
   var selected = document.querySelector("#category-filter").value;

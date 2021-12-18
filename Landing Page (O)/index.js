@@ -224,12 +224,16 @@ addLoadEvent(blogSlideShow);
 
 function filteredCategory() {
   var selectedCategory = document.querySelector("#category-filter").value;
-  // if(selectedCategory == "All"){
-  //     window.location.href="../Category (P)/category.html";
-  // }
-  // else if(selectedCategory == "fruits and vegetables"){
-
-  // }
   localStorage.setItem("filteredCategory", selectedCategory);
   window.location.href = "../Category (P)/category.html";
+}
+
+var orderId = Number(localStorage.getItem("orderId"));
+console.log(orderId);
+
+if (orderId != 0) {
+  console.log("xyz");
+} else {
+  localStorage.setItem("orderId", "0");
+  console.log("abc");
 }

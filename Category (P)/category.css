@@ -1,6 +1,61 @@
+body {
+  margin: 0;
+}
+.header {
+  overflow: hidden;
+  padding: 10px 10px;
+  box-shadow: rgba(130, 186, 60, 0.4) 0px 4px 6px -1px,
+    rgba(130, 186, 60, 0.6) 0px 2px 4px -1px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.header-right a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header a:hover {
+  color: #82ba3c;
+  text-decoration: underline;
+}
+
+.header-right {
+  float: right;
+}
+
+#company-logo {
+  width: 15%;
+  padding: 0 10px;
+}
+
+/* .floating_logo{
+  display: grid;
+  justify-content: right;
+  position: fixed;
+  right: 0;
+  top: 15%;
+}
+.floating_logo >img{
+  width: 40%;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 1) 0px 22px 70px 4px;
+} */
 th,
 td {
   border: 1px solid black;
+}
+#main-container {
+  margin-top: 20px;
 }
 #items-flex {
   font-family: "CeraPRO-Light", CeraPRO-Regular;
@@ -176,8 +231,33 @@ h3 {
   padding: 5px 10px;
   margin: 5px;
 }
+.footer {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #82ba3c;
+  padding: 10px;
+}
 
-@media only screen and (min-width: 0) and (max-width: 376px) {
+.footer > div {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  text-align: center;
+}
+
+.footer > div a,
+.footer > div p {
+  color: black;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.footer > div a:hover {
+  color: white;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 377px) {
   #filter-functionalites {
     display: none;
   }
@@ -189,6 +269,34 @@ h3 {
   #selected-category-name {
     font-size: 12px;
   }
+  .header {
+    text-align: center;
+  }
+  .header-right a {
+    line-height: 0px;
+    margin: 0;
+  }
+
+  #company-logo {
+    width: 80%;
+  }
+  .footer {
+    justify-content: center;
+  }
+
+  .footer > div {
+    margin: 10px;
+  }
+  #data-items {
+    width: 100%;
+  }
+  #catg-name {
+    flex-direction: column;
+  }
+  #items-count {
+    display: block;
+    margin-left: 10px;
+  }
 }
 
 @media only screen and (min-width: 376px) and (max-width: 768px) {
@@ -199,5 +307,19 @@ h3 {
     text-align: center;
     justify-content: center;
     margin-top: 50px;
+  }
+  .header {
+    text-align: center;
+  }
+
+  #company-logo {
+    width: 80%;
+  }
+  .footer {
+    justify-content: center;
+  }
+
+  .footer > div {
+    margin: 20px;
   }
 }

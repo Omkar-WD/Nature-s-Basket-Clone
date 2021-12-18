@@ -1,0 +1,55 @@
+.container {
+  margin: auto;
+  border-radius: 10px;
+  width: 70%;
+  border: 1px solid grey;
+  text-align: center;
+  align-items: center;
+}
+#myForm {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#myForm > input {
+  border-radius: 2px;
+  border: 1px solid grey;
+}
+#myForm > span {
+  font-size: 15px;
+}
+#btn {
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: rgb(146, 190, 70);
+  color: white;
+  border: 1px solid grey;
+  margin-top: 20px;
+}
+.container > h3 {
+  background-color: rgb(146, 190, 70);
+  padding: 15px;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+td {
+  text-align: left;
+  padding-left: 20px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  #myForm {
+    margin: 20px;
+  }
+  td {
+    text-align: left;
+    padding-left: 10 px;
+    width: 30%;
+    display: inherit;
+  }
+}

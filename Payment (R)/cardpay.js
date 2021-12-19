@@ -25,5 +25,5 @@ function payment(event) {
 document.querySelector("#amount").textContent =
   localStorage.getItem("cartAmount");
 
-document.querySelector("#orderIdDisp").textContent =
-  "ORD00000" + localStorage.getItem("orderId");
+var number = Number(localStorage.getItem("orderId")) + 1;
+document.querySelector("#orderIdDisp").textContent = "ORD00000" + number;

@@ -92,10 +92,8 @@ document.querySelector("#go-to-cart").addEventListener("click",function(){
 
 function filteredCategory(){
     var selected = document.querySelector("#category-filter").value;
-    if(selected == "All" || selected == ""){
+    if(selected == "All"){
         print(proddata);
-        document.querySelector("#items-count").textContent = proddata.length + " Products.";
-    document.querySelector("#selected-category-name").textContent = "All";
     }
     else{
     var categoryFiltered = proddata.filter(function(elem){
@@ -104,11 +102,6 @@ function filteredCategory(){
     })
     print(categoryFiltered);
     document.querySelector("#items-count").textContent = categoryFiltered.length + " Products.";
-    if(selected == "fruits and vegetables"){
-    document.querySelector("#selected-category-name").textContent = "Fruits and Vegetables";
-    }
-    else if(selected == "grocery"){
-    document.querySelector("#selected-category-name").textContent = "Groceries";
-    }
+    document.querySelector("#selected-category-name").textContent = selected;
 }
 }

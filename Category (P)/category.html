@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,25 @@
     <title>Products</title>
     <link rel="stylesheet" href="category.css">
 </head>
+
 <body>
     <div class="header">
-        <a href="../Landing Page (O)/index.html"><img id="company-logo" src="../Landing Page (O)/logo.png" alt="company logo"></a>
+        <a href="../Landing Page (O)/index.html"><img id="company-logo" src="logo.png" alt="company logo"></a>
         <div class="header-right">
+            <a href="../Favourite List (B)/favourite.html">Favourite</a>
+            <a href="../Past Purchase (V)/pastPurchase.html">Past Purchases</a>
+            <a href="../Cart (R)/Cart.html">Cart</a>
+            <a id="isLogin" href="../Login (K)/login.html">Login/Signup</a>
         </div>
     </div>
-
-    <!-- <div class="floating_logo">
-        <img src="../Landing Page (O)/floatingLogo.png" alt="">
-    </div> -->
     <div id="main-container">
         <div id="filter-functionalites">
             <div id="first-filter">
                 <span>Filter</span><span>Clear All</span>
             </div>
             <hr>
-            
-                <h3>Fruits and Vegetables</h3>
+
+            <h3>Fruits and Vegetables</h3>
             <div class="filter_s">
                 <p>Fruits</p>
                 <p>Exotic Fruits</p>
@@ -65,11 +67,13 @@
             <hr>
             <h3>Availabilty</h3>
             <div class="filter_s">
-            <label><input type="checkbox">Exclude out of stock</label></div>
+                <label><input type="checkbox">Exclude out of stock</label>
+            </div>
             <hr>
             <h3>Others</h3>
             <div class="filter_s">
-            <label><input type="checkbox">New Products</label></div>
+                <label><input type="checkbox">New Products</label>
+            </div>
         </div>
         <div id="data-items">
             <div id="price-sort">
@@ -78,8 +82,8 @@
                         <span id="selected-category-name">All</span>
                         <span id="items-count"></span>
                     </div>
-                   
-                    
+
+
                     <div id="two-filters">
                         <div class="categories">
                             <select id="category-filter" onchange="filteredCategory()">
@@ -90,17 +94,17 @@
                             </select>
                         </div>&emsp;
                         <select id="relevance-sort" onchange="pricesort()">
-                            <option value= "">Relevance</option>
+                            <option value="">Relevance</option>
                             <option value="high">price high to low</option>
                             <option value="low">price low to high</option>
                         </select>
                     </div>
                 </div>
                 <div id="home-cart">
-                    
+
                     <button id="go-to-home">Go To Home</button>&emsp;
                     <button id="go-to-cart"></button>
-                    
+
                 </div>
                 <hr>
                 <p>Explore</p>
@@ -163,5 +167,6 @@
         </div>
     </div>
 </body>
+
 </html>
 <script src="category.js"></script>

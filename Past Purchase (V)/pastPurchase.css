@@ -1,3 +1,43 @@
+body {
+  margin: 0;
+}
+
+.header {
+  overflow: hidden;
+  padding: 10px 10px;
+  box-shadow: rgba(130, 186, 60, 0.4) 0px 4px 6px -1px,
+    rgba(130, 186, 60, 0.6) 0px 2px 4px -1px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.header-right a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header a:hover {
+  color: #82ba3c;
+  text-decoration: underline;
+}
+
+.header-right {
+  float: right;
+}
+
+#company-logo {
+  width: 15%;
+  padding: 0 10px;
+}
 .container {
   padding: 20px;
 }
@@ -42,9 +82,41 @@ td {
   border-bottom: 2px solid #82ba3c;
   align-items: end;
 }
-.sub-menu > button {
+.footer {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #82ba3c;
+  padding: 10px;
 }
+
+.footer > div {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  text-align: center;
+}
+
+.footer > div a,
+.footer > div p {
+  color: black;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.footer > div a:hover {
+  color: white;
+}
+/* .sub-menu > button {
+} */
 @media only screen and (min-width: 0) and (max-width: 376px) {
+  .header {
+    text-align: center;
+  }
+
+  #company-logo {
+    width: 80%;
+  }
   .container {
     padding: 0;
   }
@@ -67,14 +139,35 @@ td {
   #all-order-button {
     margin: 10px 0;
   }
+  .footer {
+    justify-content: center;
+  }
+
+  .footer > div {
+    margin: 10px;
+  }
 }
 
 @media only screen and (min-width: 376px) and (max-width: 768px) {
+  .header {
+    text-align: center;
+  }
+
+  #company-logo {
+    width: 80%;
+  }
   .past_purchase_data_table {
     overflow-x: scroll;
   }
 
   td {
     padding: 10px;
+  }
+  .footer {
+    justify-content: center;
+  }
+
+  .footer > div {
+    margin: 20px;
   }
 }

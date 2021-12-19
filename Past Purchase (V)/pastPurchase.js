@@ -1,29 +1,6 @@
-var pastPurchaseArr = [
-  {
-    date: "11/12/12",
-    orderId: "ORD00001",
-    amount: "500",
-    paymentStatus: "Paid",
-    paymentMode: "Cash",
-  },
-  {
-    date: "12/12/12",
-    orderId: "ORD00002",
-    amount: "500",
-    paymentStatus: "Paid",
-    paymentMode: "Cash",
-  },
-  {
-    date: "13/12/12",
-    orderId: "ORD00003",
-    amount: "500",
-    paymentStatus: "Paid",
-    paymentMode: "Cash",
-  },
-];
-localStorage.setItem("pastPurchaseDB", JSON.stringify(pastPurchaseArr));
-var orderId = 0;
+var pastPurchaseArr = JSON.parse(localStorage.getItem("pastPurchaseDB")) || [];
 displayTable(pastPurchaseArr);
+
 function displayTable(arr) {
   document.querySelector("tbody").innerHTML = "";
   arr.map(function (elem, ind) {
@@ -61,4 +38,19 @@ document.querySelector("#search-button").addEventListener("click", function () {
 function allOrders() {
   var pastPurchaseArr = JSON.parse(localStorage.getItem("pastPurchaseDB"));
   displayTable(pastPurchaseArr);
+}
+
+var isLogin = localStorage.getItem("isLogin");
+var userName = localStorage.getItem("userName");
+
+if (isLogin == "true") {
+  document.querySelector("#isLogin").textContent = userName;
+  var aTag = document.createElement("a");
+  aTag.setAttribute("id", "isLogout");
+  aTag.textContent = "Logout";
+  document.querySelector(".header-right").append(aTag);
+  document.querySelector("#isLogout").addEventListener("click", function () {
+    localStorage.setItem("isLogin", "false");
+    window.location.href = "../Login (K)/login.html";
+  });
 }

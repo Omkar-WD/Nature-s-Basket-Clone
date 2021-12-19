@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 1</title>
+    <style>    
+        th,
+        td {
+            padding: 5px 10px;
+        }
+	</style>
+</head>
+<body>
+	<form id="myForm">
+		<table>
+			<tbody>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" id="name" placeholder="Enter Item Here" /></td>
+				</tr>
+				<tr>
+					<td>Quantity</td>
+					<td><input type="number" id="qty" placeholder="Enter Quantity Here" /></td>
+				</tr>
+				<tr>
+					<td>My Family Address</td>
+					<td><input type="number" id="qty" placeholder="Enter Quantity Here" /></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" id="submit" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

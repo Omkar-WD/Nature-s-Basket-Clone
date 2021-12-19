@@ -1,25 +1,29 @@
-// document.querySelector(".btn").addEventListener("click", proceed);
-// var userData = JSON.parse(localStorage.getItem("userDatabase")) || [];
-// function proceed() {
-//   var cardno = document.querySelector("#cardno").value;
-//   var expirydate = document.querySelector("#expirydate").value;
-//   var cvvno = document.querySelector("#cvvno").value;
-//   var cardname = document.querySelector("#cardname").value;
+document.querySelector("#myForm").addEventListener("submit", payment);
+function payment(event) {
+  event.preventDefault();
+  var name = document.querySelector("#name").value;
+  var cardNumber = document.querySelector("#card-number").value;
+  var cvv = document.querySelector("#cvv").value;
+  var expiryDate = document.querySelector("#expiry-date").value;
+  if (name !== "" && cardNumber !== "" && cvv !== "" && expiryDate !== "") {
+    if (cardNumber == "374245455400126" && cvv == "123") {
+      console.log("OK");
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, "0");
+      var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+      var yyyy = today.getFullYear();
+      today = mm + "/" + dd + "/" + yyyy;
+      localStorage.setItem("paymentDate", today);
+      window.location.href = "OTP.html";
+    }
+    console.log(name, cardNumber, cvv, expiryDate);
+  } else {
+    alert("error");
+  }
+}
 
-//   var userCred = {
-//     cardno: cardno,
-//     expirydate: expirydate,
-//     cvvno: cvvno,
-//     cardname: cardname,
-//   };
+document.querySelector("#amount").textContent =
+  localStorage.getItem("cartAmount");
 
-//   userData.push(userCred);
-//   localStorage.setItem("userDatabase", JSON.stringify(userData));
-
-//   if (cardno == "123456789" || cvvno == "123" || cardname == "abcd") {
-//     console.log("s");
-//     alert("payment sucessful");
-//   } else {
-//     alert("invalid DAta");
-//   }
-// }
+var number = Number(localStorage.getItem("orderId")) + 1;
+document.querySelector("#orderIdDisp").textContent = "ORD00000" + number;

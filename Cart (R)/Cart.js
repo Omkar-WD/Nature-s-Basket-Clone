@@ -2,14 +2,17 @@ var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
 displayTable(cartArr);
 document.querySelector("#cart-items-count").textContent = cartArr.length;
 if (cartArr.length != 0) {
-    var subTotalInRs = Math.ceil(cartArr.map(function (elem) {
+  var subTotalInRs = Math.ceil(
+    cartArr
+      .map(function (elem) {
         return Number(elem.rs);
-    }).reduce(function (a, b) {
+      })
+      .reduce(function (a, b) {
         return a + b;
-    }));
-}
-else {
-    var subTotalInRs = 0;
+      })
+  );
+} else {
+  var subTotalInRs = 0;
 }
 
 document.querySelector("#sub-total").textContent = subTotalInRs;
@@ -18,71 +21,128 @@ document.querySelector("#total").textContent = TotalInRs;
 var flagDiscount = false;
 
 function applyPromo() {
-    var promo = document.querySelector("#promoCode").value;
-    if (promo == "NB30") {
-        TotalInRs = Math.ceil(subTotalInRs + 50 - subTotalInRs * 0.3);
-        document.querySelector("#discount").textContent = Math.ceil(subTotalInRs * 0.3);
-        document.querySelector("#total").textContent = TotalInRs;
-        flagDiscount = true;
-        document.querySelector("#promoCode").value = "";
-    }
+  var promo = document.querySelector("#promoCode").value;
+  if (promo == "NB30") {
+    TotalInRs = Math.ceil(subTotalInRs + 50 - subTotalInRs * 0.3);
+    document.querySelector("#discount").textContent = Math.ceil(
+      subTotalInRs * 0.3
+    );
+    document.querySelector("#total").textContent = TotalInRs;
+    flagDiscount = true;
+    document.querySelector("#promoCode").value = "";
+  }
 }
-
 
 function displayTable(arr) {
-    document.querySelector("tbody").textContent = "";
-    arr.map(function (elem, ind) {
-        var tr = document.createElement("tr");
-        var td1 = document.createElement("td");
-        td1.textContent = ind + 1;
-        var td2 = document.createElement("td");
-        td2.textContent = elem.title;
-        var td3 = document.createElement("td");
-        td3.textContent = elem.rs;
-        var td4 = document.createElement("td");
-        td4.textContent = "0.00";
-        var td5 = document.createElement("td");
-        td5.textContent = elem.qt;
-        var td6 = document.createElement("td");
-        td6.textContent = elem.rs;
-        var td7 = document.createElement("td");
-        var btn = document.createElement("button");
-        btn.textContent = "Remove";
-        btn.setAttribute("id", "remove-item-button");
-        btn.addEventListener("click", function () {
-            arr = JSON.parse(localStorage.getItem("cartDatabase"));
-            arr.splice(ind, 1);
-            localStorage.setItem("cartDatabase", JSON.stringify(arr));
-            displayTable(arr);
-            document.querySelector("#cart-items-count").textContent = arr.length;
-            if (arr.length != 0) {
-                subTotalInRs = Math.ceil(arr.map(function (elem) {
-                    return Number(elem.rs);
-                }).reduce(function (a, b) {
-                    return a + b;
-                }));
-            }
-            else {
-                subTotalInRs = 0;
-            }
-            document.querySelector("#sub-total").textContent = subTotalInRs;
-            TotalInRs = subTotalInRs + 50;
-            if (flagDiscount) {
-                TotalInRs = Math.ceil(subTotalInRs + 50 - subTotalInRs * 0.3);
-                document.querySelector("#discount").textContent = Math.ceil(subTotalInRs * 0.3);
-                document.querySelector("#total").textContent = TotalInRs;
-            } else {
-                document.querySelector("#total").textContent = TotalInRs;
-            }
-        });
-        td7.append(btn);
-        tr.append(td1, td2, td3, td4, td5, td6, td7);
-        document.querySelector("tbody").append(tr);
+  document.querySelector("tbody").textContent = "";
+  arr.map(function (elem, ind) {
+    var tr = document.createElement("tr");
+    var td1 = document.createElement("td");
+    td1.textContent = ind + 1;
+    var td2 = document.createElement("td");
+    td2.textContent = elem.title;
+    var td3 = document.createElement("td");
+    td3.textContent = elem.rs;
+    var td4 = document.createElement("td");
+    td4.textContent = "0.00";
+    var td5 = document.createElement("td");
+    td5.textContent = elem.qt;
+    var td6 = document.createElement("td");
+    td6.textContent = elem.rs;
+    var td7 = document.createElement("td");
+    var btn = document.createElement("button");
+    btn.textContent = "Remove";
+    btn.setAttribute("id", "remove-item-button");
+    btn.addEventListener("click", function () {
+      arr = JSON.parse(localStorage.getItem("cartDatabase"));
+      arr.splice(ind, 1);
+      localStorage.setItem("cartDatabase", JSON.stringify(arr));
+      displayTable(arr);
+      document.querySelector("#cart-items-count").textContent = arr.length;
+      if (arr.length != 0) {
+        subTotalInRs = Math.ceil(
+          arr
+            .map(function (elem) {
+              return Number(elem.rs);
+            })
+            .reduce(function (a, b) {
+              return a + b;
+            })
+        );
+      } else {
+        subTotalInRs = 0;
+      }
+      document.querySelector("#sub-total").textContent = subTotalInRs;
+      TotalInRs = subTotalInRs + 50;
+      if (flagDiscount) {
+        TotalInRs = Math.ceil(subTotalInRs + 50 - subTotalInRs * 0.3);
+        document.querySelector("#discount").textContent = Math.ceil(
+          subTotalInRs * 0.3
+        );
+        document.querySelector("#total").textContent = TotalInRs;
+      } else {
+        document.querySelector("#total").textContent = TotalInRs;
+      }
     });
+    td7.append(btn);
+    tr.append(td1, td2, td3, td4, td5, td6, td7);
+    document.querySelector("tbody").append(tr);
+  });
 }
-document.querySelector("#homepage-button").addEventListener("click",function(){
+document
+  .querySelector("#homepage-button")
+  .addEventListener("click", function () {
     window.location.href = "../Category (P)/category.html";
-})
-document.querySelector("#homepage-button1").addEventListener("click",function(){
+  });
+document
+  .querySelector("#homepage-button1")
+  .addEventListener("click", function () {
     window.location.href = "../Category (P)/category.html";
-})
+  });
+document
+  .querySelector("#checkout-btn-top")
+  .addEventListener("click", function () {
+    var isLogin = localStorage.getItem("isLogin");
+    if (TotalInRs == 50) {
+      alert("Plz Add items in Cart!!!");
+      window.location.href = "../Category (P)/category.html";
+    }
+    if (isLogin == "false") {
+      alert("Plz Login!!!");
+      window.location.href = "../Login (K)/login.html";
+    } else {
+      localStorage.setItem("cartAmount", TotalInRs);
+      window.location.href = "../Payment (R)/inputAdd.html";
+    }
+  });
+document
+  .querySelector("#checkout-btn-bottom")
+  .addEventListener("click", function () {
+    var isLogin = localStorage.getItem("isLogin");
+    if (TotalInRs == 50) {
+      alert("Plz Add items in Cart!!!");
+      window.location.href = "../Category (P)/category.html";
+    }
+    if (isLogin == "false") {
+      alert("Plz Login!!!");
+      window.location.href = "../Login (K)/login.html";
+    } else {
+      localStorage.setItem("cartAmount", TotalInRs);
+      window.location.href = "../Payment (R)/inputAdd.html";
+    }
+  });
+
+var isLogin = localStorage.getItem("isLogin");
+var userName = localStorage.getItem("userName");
+
+if (isLogin == "true") {
+  document.querySelector("#isLogin").textContent = userName;
+  var aTag = document.createElement("a");
+  aTag.setAttribute("id", "isLogout");
+  aTag.textContent = "Logout";
+  document.querySelector(".header-right").append(aTag);
+  document.querySelector("#isLogout").addEventListener("click", function () {
+    localStorage.setItem("isLogin", "false");
+    window.location.href = "../Login (K)/login.html";
+  });
+}

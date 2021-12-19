@@ -1,3 +1,17 @@
+.star {
+  border-radius: 1px solid#880033;
+  color: #880033;
+  background-color: transparent;
+  margin-left: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.star:hover {
+  color: white;
+  background-color: #82ba3c;
+}
+
 .sub_menu {
   width: 100%;
   margin-top: 30px;

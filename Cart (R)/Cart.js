@@ -1,53 +1,3 @@
-var headerMenus = [
-  {
-    name: "Blogs",
-    href: "#blogs",
-  },
-  {
-    name: "Offers",
-    href: "#offers",
-  },
-  {
-    name: "Book Store Visit",
-    href: "#book-offer-visit",
-  },
-  {
-    name: "Contact",
-    href: "#contact",
-  },
-  {
-    name: "About",
-    href: "#about",
-  },
-  {
-    name: "Favourite",
-    href: "../Favourite List (B)/favourite.html",
-  },
-  {
-    name: "Past Purchases",
-    href: "../Past Purchase (V)/pastPurchase.html",
-  },
-  // {
-  //   name: "Cart",
-  //   href: "../Cart (R)/Cart.html",
-  // },
-  {
-    name: "Login",
-    href: "../Login (K)/login.html",
-  },
-  {
-    name: "SignUp",
-    href: "../SignUp (K)/signUp.html",
-  },
-];
-headerMenus.map(function (elem) {
-  var header = document.querySelector(".header-right");
-  var aTag = document.createElement("a");
-  aTag.setAttribute("href", elem.href);
-  // aTag.setAttribute("target", "_blank");
-  aTag.textContent = elem.name;
-  header.append(aTag);
-});
 var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
 displayTable(cartArr);
 document.querySelector("#cart-items-count").textContent = cartArr.length;
@@ -152,7 +102,7 @@ document
 document
   .querySelector("#checkout-btn-top")
   .addEventListener("click", function () {
-    var isLogin = localStorage.getItem("isLogin");
+    var isLogin = localStorage.getItem("isLogin") || "false";
     if (TotalInRs == 50) {
       alert("Plz Add items in Cart!!!");
       window.location.href = "../Category (P)/category.html";
@@ -168,7 +118,7 @@ document
 document
   .querySelector("#checkout-btn-bottom")
   .addEventListener("click", function () {
-    var isLogin = localStorage.getItem("isLogin");
+    var isLogin = localStorage.getItem("isLogin") || "false";
     if (TotalInRs == 50) {
       alert("Plz Add items in Cart!!!");
       window.location.href = "../Category (P)/category.html";
@@ -181,3 +131,18 @@ document
       window.location.href = "../Payment (R)/inputAdd.html";
     }
   });
+
+var isLogin = localStorage.getItem("isLogin") || "false";
+var userName = localStorage.getItem("userName");
+
+if (isLogin == "true") {
+  document.querySelector("#isLogin").textContent = userName;
+  var aTag = document.createElement("a");
+  aTag.setAttribute("id", "isLogout");
+  aTag.textContent = "Logout";
+  document.querySelector(".header-right").append(aTag);
+  document.querySelector("#isLogout").addEventListener("click", function () {
+    localStorage.setItem("isLogin", "false");
+    window.location.href = "../Login (K)/login.html";
+  });
+}

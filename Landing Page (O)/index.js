@@ -238,7 +238,14 @@ if (orderId != 0) {
   console.log("abc");
 }
 
-var isLogin = localStorage.getItem("isLogin");
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, "0");
+var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+var yyyy = today.getFullYear();
+today = mm + "/" + dd + "/" + yyyy;
+localStorage.setItem("paymentDate", today);
+
+var isLogin = localStorage.getItem("isLogin") || "false";
 var userName = localStorage.getItem("userName");
 
 if (isLogin == "true") {

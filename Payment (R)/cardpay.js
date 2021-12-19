@@ -16,7 +16,6 @@ function payment(event) {
       localStorage.setItem("paymentDate", today);
       window.location.href = "OTP.html";
     }
-    console.log(name, cardNumber, cvv, expiryDate);
   } else {
     alert("error");
   }
@@ -24,3 +23,6 @@ function payment(event) {
 
 document.querySelector("#amount").textContent =
   localStorage.getItem("cartAmount");
+
+var number = Number(localStorage.getItem("orderId")) + 1;
+document.querySelector("#orderIdDisp").textContent = "ORD00000" + number;

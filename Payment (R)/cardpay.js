@@ -16,7 +16,6 @@ function payment(event) {
       localStorage.setItem("paymentDate", today);
       window.location.href = "OTP.html";
     }
-    console.log(name, cardNumber, cvv, expiryDate);
   } else {
     alert("error");
   }

@@ -3,10 +3,14 @@ document.querySelector(".btn").addEventListener("click", proceed);
 function proceed() {
   var cardname = document.querySelector("#cardname").value;
 
-  var userCred = {
-    cardname: cardname,
-  };
   if (cardname == "abcd@gpay") {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, "0");
+    var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + "/" + dd + "/" + yyyy;
+    localStorage.setItem("paymentDate", today);
+    window.location.href = "OTP.html";
     window.location.href = "OTP.html";
   } else {
     alert("invalid GPay id");

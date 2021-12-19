@@ -102,7 +102,7 @@ document
 document
   .querySelector("#checkout-btn-top")
   .addEventListener("click", function () {
-    var isLogin = localStorage.getItem("isLogin");
+    var isLogin = localStorage.getItem("isLogin") || "false";
     if (TotalInRs == 50) {
       alert("Plz Add items in Cart!!!");
       window.location.href = "../Category (P)/category.html";
@@ -118,7 +118,7 @@ document
 document
   .querySelector("#checkout-btn-bottom")
   .addEventListener("click", function () {
-    var isLogin = localStorage.getItem("isLogin");
+    var isLogin = localStorage.getItem("isLogin") || "false";
     if (TotalInRs == 50) {
       alert("Plz Add items in Cart!!!");
       window.location.href = "../Category (P)/category.html";
@@ -132,7 +132,7 @@ document
     }
   });
 
-var isLogin = localStorage.getItem("isLogin");
+var isLogin = localStorage.getItem("isLogin") || "false";
 var userName = localStorage.getItem("userName");
 
 if (isLogin == "true") {

@@ -24,3 +24,6 @@ function payment(event) {
 
 document.querySelector("#amount").textContent =
   localStorage.getItem("cartAmount");
+
+document.querySelector("#orderIdDisp").textContent =
+  "ORD00000" + localStorage.getItem("orderId");

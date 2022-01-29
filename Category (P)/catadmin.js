@@ -1,4 +1,5 @@
 document.querySelector("form").addEventListener("submit", getdata);
+
 var arr = JSON.parse(localStorage.getItem("fgdatabase")) || [];
 print(arr);
 function getdata(event) {

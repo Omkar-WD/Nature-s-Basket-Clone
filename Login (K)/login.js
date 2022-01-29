@@ -6,7 +6,7 @@ function login(event) {
   var username = document.querySelector("#username").value;
   var password = document.querySelector("#password").value;
 
-  var arr = JSON.parse(localStorage.getItem("userDataBase"));
+  var arr = JSON.parse(localStorage.getItem("userDataBase")) || [];
   if (username == "admin" && password == "admin") {
     alert("Admin User!!!");
     window.location.href = "../Category (P)/catadmin.html";
@@ -32,7 +32,7 @@ function login(event) {
       alert("Login Successful!!!");
       isLogin = true;
       localStorage.setItem("isLogin", "true");
-      window.location.href = "../Landing Page (O)/index.html";
+      window.location.href = "../index.html";
     }
   }
 }

@@ -2,56 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Past Purchase</title>
-    <link rel="stylesheet" href="pastPurchase.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./Landing Page (O)/index.css" />
+    <title>NB:Home</title>
   </head>
 
   <body>
     <div class="header">
-      <a href="../index.html"
-        ><img id="company-logo" src="logo.png" alt="company logo"
+      <a href="index.html"
+        ><img
+          id="company-logo"
+          src="./Landing Page (O)/logo.png"
+          alt="company logo"
       /></a>
       <div class="header-right">
-        <a href="../Favourite List (B)/favourite.html">Favourite</a>
-        <a href="../Past Purchase (V)/pastPurchase.html">Past Purchases</a>
-        <a href="../Cart (R)/Cart.html">Cart</a>
-        <a id="isLogin" href="../Login (K)/login.html">Login/Signup</a>
+        <!-- <a href="">Blogs</a>
+            <a href="">Offers</a>
+            <a href="">Book Store Visit</a>
+            <a href="">Contact</a>
+            <a href="">About</a> -->
+        <a href="./Favourite List (B)/favourite.html">Favourite</a>
+        <a href="./Past Purchase (V)/pastPurchase.html">Past Purchases</a>
+        <a href="./Cart (R)/Cart.html">Cart</a>
+        <a id="isLogin" href="./Login (K)/login.html">Login/Signup</a>
       </div>
     </div>
+
+    <div class="floating_logo">
+      <img src="./Landing Page (O)/floatingLogo.png" alt="" />
+    </div>
+
     <div class="container">
-      <h3>PAST PURCHASE</h3>
-      <div class="sub-menu">
-        <div>
-          <label>Search Order ID :</label><br />
-          <input
-            id="order-search"
-            type="search"
-            placeholder="enter last digit"
-          />&emsp;<button id="search-button">Search</button>
-          <button id="all-order-button" onclick="allOrders()">
-            All Orders
-          </button>
-        </div>
-        <button id="go-to-home">Go To Home</button>
+      <div class="categories">
+        <select id="category-filter" onchange="filteredCategory()">
+          <option value="">Shop by category</option>
+          <option value="All">All</option>
+          <option value="fruits and vegetables">Fruits and Vegetables</option>
+          <option value="grocery">Groceries</option>
+        </select>
       </div>
-      <div class="past_purchase_data_table">
-        <table>
-          <thead>
-            <tr>
-              <td>#</td>
-              <td>Date</td>
-              <td>Order ID</td>
-              <td>Amount</td>
-              <td>Payment Status</td>
-              <td>Payment Mode</td>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+      <div class="slider">
+        <img id="image" alt="image" />
+      </div>
+      <div class="specialize_card"></div>
+      <div class="events">
+        <h1>Our Events</h1>
+        <div id="events-list"></div>
+      </div>
+      <div class="para_info"></div>
+    </div>
+
+    <div class="slider">
+      <img id="blog-image" alt="image" />
+    </div>
+
+    <div class="download_app">
+      <h1>Download The App</h1>
+      <div class="download_app_inner_div">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.godrej.naturesbasketltd"
+          target="_blank"
+        >
+          <img
+            class="download_app_icon"
+            src="./Landing Page (O)/googlePlay.svg"
+            alt="google playstore img"
+          />
+        </a>
+        <a
+          href="https://apps.apple.com/in/app/natures-basket/id1013402486"
+          target="_blank"
+        >
+          <img
+            class="download_app_icon"
+            src="./Landing Page (O)/appStore.svg"
+            alt="app store img"
+          />
+        </a>
       </div>
     </div>
+
     <div class="footer">
       <div>
         <h4>ABOUT US</h4>
@@ -119,4 +150,4 @@
   </body>
 </html>
 
-<script src="pastPurchase.js"></script>
+<script src="./Landing Page (O)/index.js"></script>

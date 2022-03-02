@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Success</title>
     <style>
-        .container {
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+      .container {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
 
-        #logo {
-            margin: 0 auto;
-        }
+      #logo {
+        margin: 0 auto;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <img id="logo" src="logo.png" alt="logo">
-        <h1>
-            Thank you for purchasing
-        </h1>
-        <p>Wait for a seconds , Redirecting...</p>
+      <img id="logo" src="logo.png" alt="logo" />
+      <h1>Thank you for purchasing</h1>
+      <p>Wait for a seconds , Redirecting...</p>
     </div>
-</body>
-
+  </body>
 </html>
 
 <script>
-    const myTimeout = setTimeout(myGreeting, 4000);
-    function myGreeting() {
-        window.location.href = "../Landing Page (O)/index.html"
-    }
+  const myTimeout = setTimeout(myGreeting, 4000);
+  function myGreeting() {
+    window.location.href = "../index.html";
+  }
 </script>

@@ -52,11 +52,11 @@ The user can look up their order history and see all of the details.
 
 ## Contributors :
 
-- Omkar Pasalkar : https://github.com/Omkar-WD
+- [Omkar Pasalkar](https://github.com/Omkar-WD)
 
-- Prakash Vanture : https://github.com/webdev1903
+- [Prakash Vanture](https://github.com/webdev1903)
 
-- Birendra Gupta : https://github.com/birendra20
+- [Birendra Gupta](https://github.com/birendra20)
 
 - Vishal Vivare : 
 

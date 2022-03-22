@@ -66,8 +66,10 @@ The user can look up their order history and see all of the details.
 
 
 ## Our blog link :
-https://medium.com/@vantureprakash1903/first-construct-week-project-at-masai-team-natures-basket-7410ab0c2d4e
+
+    https://medium.com/@vantureprakash1903/first-construct-week-project-at-masai-team-natures-basket-7410ab0c2d4e
 
 
 ## Deploy Link :
-https://naturesbasketclone.netlify.app/
+
+    https://naturesbasketclone.netlify.app/
